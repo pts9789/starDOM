@@ -24,6 +24,7 @@
       }
       h3{
         font-size: 20px;
+        cursor: pointer;
       }
       p {
         width: 90%;
@@ -54,13 +55,16 @@
             console.log(response);
         	  nasa = response;
             $s("section").append(`<img src="${nasa.hdurl}" alt="">`);
-            $s("h3").append(`${nasa.copyright}`);
-            $s("p").append(`${nasa.explanation}`);
+            $s("h3").append(`Click here for more information!`);
           },
           error(response) {
             console.error(response);
           },
         });
+      })
+      $s("h3").on("click", () => {
+        $s("h3").append(`${nasa.copyright}`);
+        $s("p").append(`${nasa.explanation}`);
       })
     </script>
   </body>
