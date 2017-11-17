@@ -1,0 +1,14 @@
+Nasa
+
+api_key=6GcWjNlfRdjcQ5IswrYUtMo73urjwHvGXFfE7iX4
+
+
+sample request:
+
+https://api.nasa.gov/planetary/apod?api_key=6GcWjNlfRdjcQ5IswrYUtMo73urjwHvGXFfE7iX4
+
+https://api.nasa.gov/api.html#authentication
+
+
+authentication: https://api.nasa.gov/api.html#authentication
+Hourly Limit: 1,000 requests per hour
