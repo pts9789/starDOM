@@ -16,16 +16,32 @@ When passed a function, starDOM will invoke said function when the DOM is fully 
 
 ## Public API
 
-### addClass
-Add a CSS class.
+### html
+Get and Set innerHTML.
 ```javascript
-  $newElement.addClass(className)
+//get
+  $newElement.html()
+
+//set
+  $newElement.html("To infinity... and beyond!")
   ```
 
 ### append
 Add child elements.
 ```javascript
   $newElement.append(children)
+  ```
+
+### addClass
+Add a CSS class.
+```javascript
+  $newElement.addClass(className)
+  ```
+
+### removeClass
+Remove CSS class.
+```javascript
+  $newElement.removeClass(className)
   ```
 
 ### attr
@@ -44,10 +60,10 @@ Get children.
   $newElement.children()
   ```
 
-### empty
-Clear innerHTML.
+### parent
+Get parent.
 ```javascript
-  $newElement.empty()
+  $newElement.parent()
   ```
 
 ### find
@@ -56,14 +72,10 @@ Find by selector.
   $newElement.find(selector)
   ```
 
-### html
-Get and Set innerHTML.
+### empty
+Clear innerHTML.
 ```javascript
-//get
-  $newElement.html()
-
-//set
-  $newElement.html("To infinity... and beyond!")
+  $newElement.empty()
   ```
 
 ### off
@@ -78,22 +90,10 @@ Add event listener.
   $newElement.on("eventName", callback)
   ```
 
-### parent
-Get parent.
-```javascript
-  $newElement.parent()
-  ```
-
 ### remove
 Remove from DOM.
 ```javascript
   $newElement.remove()
-  ```
-
-### removeClass
-Remove CSS class.
-```javascript
-  $newElement.removeClass(className)
   ```
 
 ## AJAX
