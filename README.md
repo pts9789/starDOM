@@ -3,6 +3,9 @@ A lightweight DOM manipulation library that includes AJAX requests and event han
 
 ![Frontpage](./docs/starDOM.png)
 
+
+[starDOM Live](http://www.patrick-spencer.nyc/starDOM/)
+
 ## Javascript Objects
 starDOM's $s can be passed an HTML element or a CSS selector to create a Javascript object with increased functionality.
 ```javascript
