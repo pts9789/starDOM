@@ -1,0 +1,103 @@
+body  {
+  background-image: url("https://ak6.picdn.net/shutterstock/videos/5206766/thumb/1.jpg?i10c=img.resize(height:160)");
+  background-color: #cccccc;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1, h2, h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  cursor: default;
+}
+h2:hover{
+  cursor: pointer;
+}
+h3{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+div img {
+  width: 60%;
+}
+
+div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.explanation{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  width: 80%;
+  height: 80%;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.patrick{
+  height: 75px;
+  width: 450px;
+  margin: 10px 20px;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.github{
+  height: 19px;
+  width: 75px;
+  padding: 0 10px;
+}
+
+.linkedin{
+  height: 20px;
+  width: 90px;
+  padding: 0 10px;
+}
+
+.portfolio{
+  height: 20px;
+  width: 90px;
+  padding: 0 10px;
+}

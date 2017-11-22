@@ -5,66 +5,49 @@
     <link rel="icon"
       type="image/png"
       href="docs/stars.png">
-    <title></title>
+    <title>starDOM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <script src="./lib/starDOM.js" type="text/javascript"></script>
-    <style media="screen">
-      body  {
-        background-image: url("https://ak6.picdn.net/shutterstock/videos/5206766/thumb/1.jpg?i10c=img.resize(height:160)");
-        background-color: #cccccc;
-        margin: 0;
-      }
-      h1, h3, p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-weight: bold;
-        font-family: monospace;
-      }
-      h1:hover{
-        cursor: pointer;
-      }
-      h3{
-        font-size: 20px;
-        cursor: pointer;
-      }
-      p {
-        width: 90%;
-      }
-      div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-    </style>
+    <link rel="stylesheet" href="lib/starStyles.css">
   </head>
   <body>
-    <h1>Click Here for Nasa's Picture of the day!</h1>
+    <div class="header">
+      <img class="patrick" src="https://fontmeme.com/permalink/171121/a10341491049ebdad85c89bc25cfddbf.png">
+      <div class="contact-info">
+        <a href="http://www.patrick-spencer.nyc/" target="_blank"><img class="portfolio" src="https://fontmeme.com/permalink/171121/32b9933743c07a04e94392bd54e3aca0.png"></a>
+        <a href="http://github.com/pts9789" target="_blank"><img class="github" src="https://fontmeme.com/permalink/171121/d320a4db17df3e69b22465886d08172b.png"></a>
+        <a href="https://www.linkedin.com/in/patrick-spencer-950645152/" target="_blank"><img class="linkedin" src="https://fontmeme.com/permalink/171121/384cbb9f9d3bb7aae2c24deb0a9dac91.png"></a>
+      </div>
+    </div>
     <div>
-      <section></section>
-      <h3></h3>
-      <p></p>
+      <section>
+        <h1>Welcome to starDOM</h1>
+        <h2>Click here for Nasa's Picture of the day!</h1>
+
+      </section>
+      <h3 class="copyright"></h3>
+      <p class="explanation"></p>
     </div>
     <script type="text/javascript">
 
       let nasa;
-      $s("h1").on("click", () => {
+      $s("h2").on("click", () => {
         $s.ajax({
           method: 'GET',
           url: "https://api.nasa.gov/planetary/apod?api_key=6GcWjNlfRdjcQ5IswrYUtMo73urjwHvGXFfE7iX4",
           success(response) {
             console.log(response);
         	  nasa = response;
-            $s("section").append(`<img src="${nasa.hdurl}" alt="">`);
+            $s("section").append(`<img class="nasa-img" src="${nasa.hdurl}" alt="">`);
+            $s("h3").append("Click here more info!");
           },
           error(response) {
             console.error(response);
           },
         });
+        $s("section").empty();
       })
-      $s("section").on("mouseover", () => {
+      $s("h3").on("click", () => {
         $s("h3").append(`${nasa.copyright}`);
         $s("p").append(`${nasa.explanation}`);
       })
