@@ -51,7 +51,13 @@
           success(response) {
             console.log(response);
         	  nasa = response;
-            $s("section").append(`<img class="nasa-img" src="${nasa.hdurl}" alt="">`);
+            if (nasa.media_type === "video") {
+              $s("section").append(`<iframe width="560" height="315"
+                                    src="${nasa.url}"
+                                    frameborder="0" allowfullscreen></iframe>`)
+            } else {
+              $s("section").append(`<img class="nasa-img" src="${nasa.hdurl}" alt="">`);
+            }
             $s("h3").append("Click here more info!");
           },
           error(response) {
@@ -61,7 +67,7 @@
         $s("section").empty();
       })
       $s("h3").on("click", () => {
-        $s("h3").append(`${nasa.copyright}`);
+        $s("h3").append(`${nasa.title}`);
         $s("p").append(`${nasa.explanation}`);
       })
     </script>
